@@ -1,0 +1,50 @@
+*ncm2-vlime.txt*   NCM2 completion source for Common Lisp using Vlime
+
+
+==============================================================================
+TABLE OF CONTENTS                                        *ncm2-vlime-contents*
+
+    1. Installation ................................ |ncm2-vlime-installation|
+    2. Using .............................................. |ncm2-vlime-using|
+    3. API .................................................. |ncm2-vlime-api|
+
+
+==============================================================================
+INSTALLATION                                         *ncm2-vlime-installation*
+
+This plugin is installed like any other Vim plugin. It depends on NCM2 and
+Vlime, please follow their instructions as well.
+
+    NCM2   https://github.com/ncm2/ncm2
+    Vlime  https://github.com/l04m33/vlime/
+
+
+==============================================================================
+USING                                                       *ncm2-vlime-using*
+
+Make sure |ncm2| and |vlime| are working. Once there is a Vlime connection in
+the current buffer completions will appear. If there is no connection or the
+file type of the buffer is not `lisp` not Vlime completions will show.
+
+
+==============================================================================
+API                                                           *ncm2-vlime-api*
+
+                                                          *g:ncm2_vlime_fuzzy*
+g:ncm2_vlime_fuzzy~
+                                                          *t:ncm2_vlime_fuzzy*
+t:ncm2_vlime_fuzzy~
+                                                          *b:ncm2_vlime_fuzzy*
+b:ncm2_vlime_fuzzy~
+
+A boolean value which determines whether fuzzy completion (|v:true|) or simple
+completion (|v:false|) is used. The values are tried in increasing order of
+scope specificity (with global being the least specific). If none are defined,
+then an educated guess will be made.
+
+See also: |VlimeConnection.SimpleCompletions()|
+          |VlimeConnection.FuzzyCompletions()|
+
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
