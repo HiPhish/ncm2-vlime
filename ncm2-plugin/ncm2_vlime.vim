@@ -32,6 +32,6 @@ let s:source = {
 	\ 'scope': ['lisp'],
 	\ 'on_complete': function('ncm2#vlime#on_complete'),
 	\ 'complete_length': 3,
-	\ 'word_pattern': '[^\s()]+'}
+	\ 'word_pattern': '[^\s();]+'}
 
 call ncm2#register_source(s:source)
