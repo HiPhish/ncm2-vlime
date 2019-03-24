@@ -46,12 +46,14 @@ endfunction
 " the completion to NCM2.
 
 function! ncm2#vlime#complete_simple(context, result)
+	if empty(a:result[0]) | return | endif
 	let l:matches = a:result[0]
 	let l:startccol = a:context.startccol
 	call ncm2#complete(a:context, l:startccol, l:matches)
 endfunction
 
 function! ncm2#vlime#complete_fuzzy(context, result)
+	if empty(a:result[0]) | return | endif
 	" The result is a pair, the first element is a list of tuples. We only
 	" want the first item of each tuple. I don't know what the remainder of
 	" the tuple is supposed to be.
